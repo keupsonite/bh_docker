@@ -54,6 +54,13 @@ echo "------ THIS COULD TAKE A LITTLE WHILE ..... please wait. --"
 echo "-----------------------------------------------------------------"
 composer update
 
+# Laravel needs these to be writable
+chmod 777 storage/logs
+chmod 777 bootstrap/cache
+chmod -R 777 /var/www/bowhead/storage/
+chown www-data:www-data . -R
+redis-server /etc/redis.conf
+
 ln -s /var/www/bowhead/public /var/www/html/bowhead
 
 mkfifo quotes

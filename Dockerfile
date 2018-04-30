@@ -8,7 +8,7 @@
 
 FROM ej52/alpine-nginx-php
 
-MAINTAINER joeldg@rxmg.com
+MAINTAINER hello@zakarialounes.fr
 
 RUN apk add --update
 
